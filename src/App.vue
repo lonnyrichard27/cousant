@@ -1,7 +1,7 @@
 <template>
   <div>
     <table id="customers">
-      <tr>
+      <tr id="radius">
         <th class="box">Project Name</th>
         <th>Developer</th>
         <th>Main Contractor</th>
@@ -40,9 +40,10 @@ export default {
 </script>
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
-$badge-color : #A27C3D;
-$background-color:#28394b;
-
+  table {
+    border-radius: 9px;
+    overflow: hidden;
+  }
 #customers {
   font-family: "Questrial", sans-serif;
   font-size: 17px;
@@ -52,16 +53,13 @@ $background-color:#28394b;
 
   .badge {
     background-color: #FEDFB0;
-    color: $badge-color ;
+    color: #A27C3D;
     padding: 7px;
     border-radius: 3px;
   }
   .fas.fa-sort-down{
     margin-left: 2rem;
   }
-    // box-shadow:-5px 0 5px -5px #e8e9eB;
-
-  // 
   td:nth-child(1){
     box-shadow:8px 2px 7px 0px #f3f3f5;
     color: #626F79;
@@ -73,9 +71,8 @@ $background-color:#28394b;
   .box{
     box-shadow:10px -1px 5px -3px #263747;
   }
-
   tr:nth-child(1) {
-    background-color: $background-color;
+    background-color:#28394b;
   }
   th {
    padding:27px;
